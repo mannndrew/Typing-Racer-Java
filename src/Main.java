@@ -3,9 +3,9 @@ public class Main {
 	public static void main(String []args) {
 	
 		LaunchWindow window = new LaunchWindow();
-		fileInput bankFile = new fileInput();
-		randomNumGen random = new randomNumGen();
-		JTextFieldLimit max = new JTextFieldLimit(0);
+		FileInput bankFile = new FileInput();
+		RandomNumGen random = new RandomNumGen();
+		TextLimit max = new TextLimit(0);
 		Stopwatch time = new Stopwatch();
 		
 		boolean startGame = false;
@@ -32,7 +32,7 @@ public class Main {
 		window.blueText.setText("");
 		window.redText.setText("<html><span bgcolor='rgb(100,50,50)'>" + "" + "</span></html>");
 		
-		bankNum = bankFile.initFile();
+		bankNum = bankFile.lineCount();
 		random.generate(bankNum);
 		sentenceBank = bankFile.readFile(bankNum);
 		sentence = sentenceBank[random.numArr[sentenceCounter]];

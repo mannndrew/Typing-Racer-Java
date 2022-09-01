@@ -1,4 +1,4 @@
-public class randomNumGen {
+public class RandomNumGen {
 	
 	int[] numArr;
 	

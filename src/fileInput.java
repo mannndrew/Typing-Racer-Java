@@ -6,45 +6,39 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class fileInput {
+public class FileInput {
 	
-	String workingDir;
+	String workingDir = "";
 	
-	int initFile() {
+	FileInput() {
 		
-		workingDir = String.format("%s" + "\\src\\sentenceBank.txt", System.getProperty("user.dir"));
+		Path path = Paths.get("");
+
+		workingDir = path.toAbsolutePath().toString();
+		workingDir = workingDir + "\\TRResources";
+	}
 	
-		Path path;
-		path = Paths.get(workingDir);
+	int lineCount() {
 		
 		long lines = 0;
 		
+		Path path = Paths.get(workingDir + "\\sentenceBank.txt");
+			
 		try {
-			lines = Files.lines(path).count();	
+			lines = Files.lines(path).count();
 		} 
-		
-		catch (IOException e) {
-			workingDir = "";
-			path = Paths.get(workingDir);
-			workingDir = path.toAbsolutePath().toString();
-			workingDir = workingDir + "\\TRResources\\sentenceBank.txt";
-			path = Paths.get(workingDir);
 			
-			try {
-				lines = Files.lines(path).count();
-			} 
-			
-			catch (IOException e1) {
-				e1.printStackTrace();
-			}
+		catch (IOException e1) {
+			e1.printStackTrace();
 		}
+		
 		return (int) lines;
 	}
 	
 	String[] readFile(int lines) {
 		
 		String sentenceBank[] = new String[lines];
-		File file = new File(workingDir); 
+		File file = new File(workingDir + "\\sentenceBank.txt"); 
 		Scanner scan = null;
 		
 		int counter = 0;

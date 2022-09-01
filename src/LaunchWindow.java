@@ -15,7 +15,8 @@ import javax.swing.JTextField;
 
 public class LaunchWindow {
 	
-	ImageIcon image = new ImageIcon(getClass().getResource("keyboard.png"));
+	FileInput resource = new FileInput();
+	ImageIcon image = new ImageIcon(resource.workingDir + "\\keyboard.png");
 	JTextArea WPM = new JTextArea();
 	JTextField textField = new JTextField();
 	JLabel normalText = new JLabel();                   
