@@ -96,14 +96,17 @@ public class Game {
 				}
 			}
 		}
+	}
+	
+	int countTotalRight() {
+		
+		int previousLetters = 0;
 		
 		for(int i=0; i<wordCounter; i++) {
-			totalLettersRight += sentenceSplit[i].length() + 1;
+			previousLetters += sentenceSplit[i].length() + 1;
 		}
 		
-		totalLettersRight += lettersRight;
-			
-		
+		return previousLetters + lettersRight;
 	}
 	
 	boolean checkLastWord() {

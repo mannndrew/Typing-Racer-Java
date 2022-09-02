@@ -7,12 +7,13 @@ public class Main {
 		game.initialize();
 		game.startGame();
 		
-		
 		while(game.sentenceCounter<game.bankNum) {
 			
 			game.inputCheck();
 			game.resetLetters();
 			game.checkLetters();
+			
+			game.totalLettersRight = game.countTotalRight();
 			
 			if(game.checkLastWord()==true) {
 				game.wordCounter++;

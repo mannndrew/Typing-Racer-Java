@@ -226,6 +226,7 @@ public class LaunchWindow {
 		JFrame frame = new JFrame();
 		frame.setTitle("Typing Racer");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocation(200, 200);
 		frame.setResizable(false);
 		frame.setVisible(true);
 		frame.setSize(800,400);
