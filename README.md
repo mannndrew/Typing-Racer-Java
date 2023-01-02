@@ -15,4 +15,4 @@ FEATURES:
 
 APPLICATION PREVIEW:
 
-https://user-images.githubusercontent.com/110883231/210275707-92ab2b0c-0bd8-4255-b822-88b241a4ba0a.mp4
+![TypeRacer](https://user-images.githubusercontent.com/110883231/210275808-3ecf7122-f4e3-4d60-8c3e-84a1b3999b5b.gif)
