@@ -1,3 +1,5 @@
+package game;
+
 public class Game {
 	
 	boolean startGame = false;
